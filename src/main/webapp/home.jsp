@@ -1,3 +1,4 @@
+<%@page import="com.app.release.ConstantProperties"%>
 <%@page import="java.io.File"%>
 <%@page import="com.app.release.T24DevHelper"%>
 <%@page import="java.util.ArrayList"%>
@@ -45,35 +46,72 @@ div#fixedfooter {
 
 <div id="fixedheader">Release Management</div>
  
-<div >
-            <table >
+<div>
+<section>Release Package Details</section>
+<table>
+<tr><td> 
 
-		<thead style="font-style: oblique; font-size: 18px;">
-			<tr>
-				<td>Sl. No</td>
-				<td>Release Name</td>
-			</tr>
-		</thead>
-		<tbody>
-			<%
-String devLocation = "E:\\My projects\\bootstrap-login-forms\\form-1\\assets\\bootstrap";
+          <table>
+<thead style="font-style: oblique; font-size: 18px;">
+	<tr>
+		<td>Sl. No</td>
+		<td>Developed Package Name</td>
+	</tr>
+</thead>
+<tbody>
+	<%
+String devLocation = ConstantProperties.devPath;
 
 List<File> list = T24DevHelper.listFiles(devLocation);
 int v =1;
 for(int i=0; i< list.size(); i++){
 	if(list.get(i).isFile()){
 	%>
-			<tr>
-				<td><%=v%></td>
-				<td><%= list.get(i).getAbsolutePath().replace(devLocation, "") %></td>
-			</tr>
-			<%
+<tr>
+	<td><%=v%></td>
+<td><%= list.get(i).getAbsolutePath().replace(devLocation, "") %></td>
+</tr>
+<%
 	v++;
 	}
 }
 %>
-		</tbody>
-	</table>
+	</tbody>
+</table>
+	
+	</td><td style="margin-left: 15mm; padding: 12px;"> &nbsp;&nbsp;&nbsp;&nbsp; </td>  <td> 
+	
+	      <table>
+<thead style="font-style: oblique; font-size: 18px;">
+	<tr>
+		<td>Sl. No</td>
+		<td>Proud Package Name</td>
+	</tr>
+</thead>
+<tbody>
+	<%
+String devLocationa = ConstantProperties.devPath;
+
+List<File> lista = T24DevHelper.listFiles(devLocationa);
+int va =1;
+for(int i=0; i< lista.size(); i++){
+	if(lista.get(i).isFile()){
+	%>
+<tr>
+	<td><%=va%></td>
+<td><%= lista.get(i).getAbsolutePath().replace(devLocationa, "") %></td>
+</tr>
+<%
+	va++;
+	}
+}
+%>
+	</tbody>
+</table>
+	
+	
+	</td> </tr>
+</table>
 </div>
 
   

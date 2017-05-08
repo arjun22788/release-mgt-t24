@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class MainSerlevt extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	static String devLocation = "E:\\My projects\\bootstrap-login-forms";
 
 	public MainSerlevt() {
 		super();
