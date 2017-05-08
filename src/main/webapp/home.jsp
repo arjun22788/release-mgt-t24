@@ -90,7 +90,7 @@ for(int i=0; i< list.size(); i++){
 </thead>
 <tbody>
 	<%
-String devLocationa = ConstantProperties.devPath;
+String devLocationa = ConstantProperties.proudPath;
 
 List<File> lista = T24DevHelper.listFiles(devLocationa);
 int va =1;
