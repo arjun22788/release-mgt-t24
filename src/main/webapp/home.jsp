@@ -69,7 +69,7 @@ for(int i=0; i< list.size(); i++){
 	%>
 <tr>
 	<td><%=v%></td>
-<td><%= list.get(i).getAbsolutePath().replace(devLocation, "") %></td>
+<td><%= list.get(i).getAbsolutePath().replace(devLocation, "")%></td>
 </tr>
 <%
 	v++;
@@ -114,7 +114,7 @@ for(int i=0; i< lista.size(); i++){
 </table>
 </div>
 
-  
+  <form action="" method="post"></form>
  
 <div id="fixedfooter">Copyright @Appistoki pvt ltd</div>
 </body>
